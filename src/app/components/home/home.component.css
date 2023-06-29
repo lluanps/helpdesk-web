@@ -1,0 +1,18 @@
+.card {
+    width: 90%;
+    height: 590px;
+    margin: auto;
+    background-image: url('/assets/img/PFC-all.jpg');
+    border-radius: 40px;
+}
+
+.mat-card-title {
+    color: white;
+}
+
+img {
+    height: 30rem;
+    width: 50rem;
+    padding: 0 0 0 40%;
+}
+
