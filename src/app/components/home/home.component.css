@@ -1,7 +1,7 @@
 .card {
     width: 90%;
     height: 590px;
-    margin: auto;
+    margin: 1rem auto;
     background-image: url('/assets/img/PFC-all.jpg');
     border-radius: 40px;
 }
