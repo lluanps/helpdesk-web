@@ -4,6 +4,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { HomeComponent } from './components/home/home.component';
 import { InstrutorListComponent } from './components/instrutor/instrutor-list/instrutor-list.component';
 import { LoginComponent } from './components/login/login.component';
+import { AuthGuard } from './auth/auth.guard';
 
 const routes: Routes = [
   {
@@ -11,7 +12,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    component: NavComponent, children: [
+    component: NavComponent, canActivate: [AuthGuard], children: [
       {path: 'home', component: HomeComponent},
       {path: 'instrutores', component: InstrutorListComponent}
     ]
