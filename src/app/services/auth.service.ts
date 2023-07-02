@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { JwtHelperService } from '@auth0/angular-jwt';
-
 import { API_CONFIG } from '../config/api.config';
 import { Credenciais } from '../models/credenciais';
 
@@ -15,13 +14,13 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   authenticate(creds: Credenciais) {
-    return this.http.post(`${API_CONFIG.baseUrl}/login`, creds, {
+    return this.http.post(`${API_CONFIG.baseUrl}login`, creds, {
       observe: 'response',
       responseType: 'text'
     })
   }
-  
-  successFuillLogin(authToken: string) {
+
+  successFullLogin(authToken: string) {
     localStorage.setItem('token', authToken);
   }
 

@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Instrutor } from 'src/app/models/instrutor';
+import { InstrutorService } from 'src/app/services/instrutor.service';
 
 @Component({
   selector: 'app-instrutor-list',
@@ -10,30 +11,28 @@ import { Instrutor } from 'src/app/models/instrutor';
 })
 export class InstrutorListComponent implements OnInit {
 
-  ELEMENT_DATA: Instrutor[] = [
-    {    
-      id: 1,
-      nome: 'Luan Pinheiro',
-      cpf: '123.456.789-10',
-      email: 'luan@gmail.com',
-      senha: 'admin',
-      perfis: ['0'],
-      dataCriacao: '29/06/2023'
-    }
-  ];
+  ELEMENT_DATA: Instrutor[] = [];
   
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'acoes'];
+  displayedColumns: string[] = ['id', 'nome', 'cpf', 'email', 'acoes'];
   dataSource = new MatTableDataSource<Instrutor>(this.ELEMENT_DATA);
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
-  ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
+  constructor(
+    private service: InstrutorService
+  ) { }
+
+  ngOnInit(): void {
+    this.findAll();
   }
+
+  findAll() {
+    this.service.findAll().subscribe(resposta => {
+      this.ELEMENT_DATA = resposta
+      this.dataSource = new MatTableDataSource<Instrutor>(resposta)
+      this.dataSource.paginator = this.paginator;
+    });
+  }
+
 }
 
