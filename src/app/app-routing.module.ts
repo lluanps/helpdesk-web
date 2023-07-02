@@ -17,7 +17,7 @@ const routes: Routes = [
       {path: 'home', component: HomeComponent},
       
       {path: 'instrutores', component: InstrutorListComponent},
-      {path: 'instrutores/create', component: InstrutorCreateComponent},
+      {path: 'instrutores/create', component: InstrutorCreateComponent}
     ]
   }
 ];

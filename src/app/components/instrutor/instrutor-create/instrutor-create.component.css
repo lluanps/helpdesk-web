@@ -1,0 +1,33 @@
+.container {
+    width: 90%;
+    margin: auto;
+    padding: 1rem 1rem 3rem 1rem;
+    border-radius: .6rem;
+}
+
+.full-width {
+    width: 100%;
+}
+
+h1 {
+    text-align: center;   
+}
+
+mat-form-field {
+    width: 100%;
+    display: block;
+    justify-content: initial;
+}
+
+.div-checkbox {
+    width: 20%;
+}
+
+.section {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+button {
+    margin: 1rem .5rem;
+}
