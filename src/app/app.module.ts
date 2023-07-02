@@ -35,6 +35,7 @@ import { InstrutorListComponent } from './components/instrutor/instrutor-list/in
 import { LoginComponent } from './components/login/login.component';
 import { ToastrModule } from 'ngx-toastr';
 import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
+import { InstrutorCreateComponent } from './components/instrutor/instrutor-create/instrutor-create.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
     HomeComponent,
     HeaderComponent,
     InstrutorListComponent,
-    LoginComponent
+    LoginComponent,
+    InstrutorCreateComponent
   ],
   imports: [
     BrowserModule,
