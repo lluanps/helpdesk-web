@@ -37,6 +37,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
 import { InstrutorCreateComponent } from './components/instrutor/instrutor-create/instrutor-create.component';
 import { InstrutorUpdateComponent } from './components/instrutor/instrutor-update/instrutor-update.component';
+import { InstrutorDeleteComponent } from './components/instrutor/instrutor-delete/instrutor-delete.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { InstrutorUpdateComponent } from './components/instrutor/instrutor-updat
     InstrutorListComponent,
     LoginComponent,
     InstrutorCreateComponent,
-    InstrutorUpdateComponent
+    InstrutorUpdateComponent,
+    InstrutorDeleteComponent
   ],
   imports: [
     BrowserModule,
