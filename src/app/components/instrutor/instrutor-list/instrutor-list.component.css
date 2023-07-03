@@ -12,3 +12,11 @@ mat-form-field {
     width: 100%;
     margin: 1rem 0;
 }
+
+.edit {
+    color: rgb(82, 30, 117);
+}
+
+.delete {
+    color: rgb(168, 1, 1);
+}
