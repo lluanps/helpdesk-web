@@ -1,6 +1,6 @@
 <div class="container mat-elevation-z4">
     <form class="form">
-        <h1 class="full-width">Cadastrar Novo Instrutor</h1>
+        <h1 class="full-width">Atualizar Instrutor</h1>
         
         <div class="creds-container">
             <p>
@@ -45,8 +45,8 @@
           </section>
     </div>
 
-    <button (click)="create()" [disabled]="!validaCampos()" mat-stroked-button color="primary">Cadastrar</button>
-    <button routerLink="../" mat-raised-button color="warn">Cancelar</button>
+    <button (click)="update()" [disabled]="!validaCampos()" mat-stroked-button color="primary">Atualizar</button>
+    <button routerLink="../../" mat-raised-button color="warn">Cancelar</button>
 
 </form>
 </div>

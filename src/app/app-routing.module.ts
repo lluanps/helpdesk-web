@@ -6,6 +6,7 @@ import { InstrutorListComponent } from './components/instrutor/instrutor-list/in
 import { LoginComponent } from './components/login/login.component';
 import { AuthGuard } from './auth/auth.guard';
 import { InstrutorCreateComponent } from './components/instrutor/instrutor-create/instrutor-create.component';
+import { InstrutorUpdateComponent } from './components/instrutor/instrutor-update/instrutor-update.component';
 
 const routes: Routes = [
   {
@@ -17,7 +18,8 @@ const routes: Routes = [
       {path: 'home', component: HomeComponent},
       
       {path: 'instrutores', component: InstrutorListComponent},
-      {path: 'instrutores/create', component: InstrutorCreateComponent}
+      {path: 'instrutores/create', component: InstrutorCreateComponent},
+      {path: 'instrutores/update/:id', component: InstrutorUpdateComponent},
     ]
   }
 ];
