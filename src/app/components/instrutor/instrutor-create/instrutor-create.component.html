@@ -6,7 +6,7 @@
             <p>
                 <mat-form-field appearance="fill">
                   <mat-label>Nome</mat-label>
-                  <input [formControl]="nome" required matInput placeholder="nome">
+                  <input [(ngModel)]="instrutor.nome" name="nome" [formControl]="nome" required matInput placeholder="nome">
                   <mat-icon matSuffix>badge</mat-icon>
                 </mat-form-field>
             </p>
@@ -14,7 +14,7 @@
             <p>
                 <mat-form-field appearance="fill">
                   <mat-label>CPF</mat-label>
-                  <input [formControl]="cpf" required matInput placeholder="000.000.000-00" maxlength="11">
+                  <input [(ngModel)]="instrutor.cpf" name="cpf" [formControl]="cpf" required matInput placeholder="000.000.000-00" maxlength="11">
                   <mat-icon matSuffix>pin</mat-icon>
                 </mat-form-field>
             </p>
@@ -22,7 +22,7 @@
             <p>
                 <mat-form-field appearance="fill">
                   <mat-label>email</mat-label>
-                  <input [formControl]="email" required matInput placeholder="nome@email.com">
+                  <input [(ngModel)]="instrutor.email" name="email" [formControl]="email" required matInput placeholder="nome@email.com">
                   <mat-icon matSuffix>alternate_emaild</mat-icon>
                 </mat-form-field>
             </p>
@@ -30,7 +30,7 @@
             <p>
                 <mat-form-field appearance="fill">
                   <mat-label>Senha</mat-label>
-                  <input [formControl]="senha" required type="password" matInput placeholder="Digite sua senha">
+                  <input [(ngModel)]="instrutor.senha" name="senha" [formControl]="senha" required type="password" matInput placeholder="Digite sua senha">
                   <mat-icon matSuffix>password</mat-icon>
                 </mat-form-field>
             </p>
@@ -39,13 +39,13 @@
 
     <div class="div-checkbox">
         <section class="section">
-            <mat-checkbox class="margin" color="primary">Admin</mat-checkbox>
-            <mat-checkbox class="margin" color="primary">Instrutor</mat-checkbox>
-            <mat-checkbox class="margin" color="primary">Cliente</mat-checkbox>
+            <mat-checkbox (click)="addPerfil(0)" class="margin" color="primary">Admin</mat-checkbox>
+            <mat-checkbox (click)="addPerfil(1)" class="margin" color="primary">Cliente</mat-checkbox>
+            <mat-checkbox (click)="addPerfil(2)" class="margin" color="primary">Instrutor</mat-checkbox>
           </section>
     </div>
 
-    <button [disabled]="!validaCampos()" mat-stroked-button color="primary">Cadastrar</button>
+    <button (click)="create()" [disabled]="!validaCampos()" mat-stroked-button color="primary">Cadastrar</button>
     <button routerLink="../" mat-raised-button color="warn">Cancelar</button>
 
 </form>
