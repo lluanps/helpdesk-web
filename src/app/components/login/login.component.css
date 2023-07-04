@@ -6,26 +6,96 @@
     justify-content: center;
 }
 
-.form {
-    width: 30rem;
-    margin: auto;
-    padding: 4rem 1rem;
-    background-color: rgb(225, 228, 230);
-    opacity: 92%;
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: column;
-}
-
-h1 {
+.login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(24, 20, 20, 0.987);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(10, 5, 37, 0.6);
+    border-radius: 10px;
+  }
+  
+  .login-box .user-box {
+    position: relative;
+  }
+  
+  .login-box .user-box input {
     width: 100%;
-    text-align: center;
-}
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+  }
+  
+  .login-box .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+  }
+  
+  .login-box .user-box input:focus ~ label,
+  .login-box .user-box input:valid ~ label,
+  .login-box .user-box input.autocomplete ~ label  {
+    top: -20px;
+    left: 0;
+    color: #bdb8b8;
+    font-size: 12px;
+  }
+  
+  .login-box form botao {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px
+  }
+  
+  .botao:hover {
+    background: rgba(15, 7, 58, 0.6);
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #47444f,
+                0 0 25px #170a41,
+                0 0 50px #1f0b5c,
+                0 0 100px #1d0563;
+  }
+  
+  .login-box {
+    position: absolute;
+    display: block;
+  }
+  
+  @keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+  
+    50%,100% {
+      left: 100%;
+    }
+  }
 
-.full-width {
-    width: 100%;
-}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px rgba(24, 20, 20, 0.987) inset;
+    -webkit-text-fill-color: white !important;
 
-button {
-    color: black;
 }

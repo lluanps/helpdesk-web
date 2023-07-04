@@ -1,19 +1,16 @@
 <div class="container">
-    <form class="form mat-elevation-z4">
-
-        <h1>Personal Fight Club</h1>
-
-        <mat-form-field class="full-width" appearance="fill">
-            <mat-label>Email</mat-label>
-            <input [formControl]="email" required [(ngModel)]="creds.email" name="email" matInput placeholder="Digite seu Email">
-        </mat-form-field>
-      
-        <mat-form-field class="full-width" appearance="fill">
-              <mat-label>Senha</mat-label>
-              <input [formControl]="senha" required [(ngModel)]="creds.senha" name="senha" type="password" matInput placeholder="Senha">
-        </mat-form-field>
-
-        <button (click)="logar()" [disabled]="!validaCampos()" class="full-width mat-elevation-z4" mat-raised-button>Login</button>
-    </form>      
+<div class="login-box">
+    <div class="login-box">
+        <form>
+          <div class="user-box">
+            <input [formControl]="email" required [(ngModel)]="creds.email" type="text" name="email">
+            <label>Username</label>
+          </div>
+          <div class="user-box">
+            <input [formControl]="senha" required [(ngModel)]="creds.senha" type="password" name="senha">
+            <label>Senha</label>
+          </div>
+          <button class="botao" (click)="logar()" required="!validaCampos()"  mat-raised-button>Login</button>
+        </form>
+    </div>
 </div>
-  
