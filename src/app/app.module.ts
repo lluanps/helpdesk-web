@@ -40,6 +40,7 @@ import { InstrutorUpdateComponent } from './components/instrutor/instrutor-updat
 import { InstrutorDeleteComponent } from './components/instrutor/instrutor-delete/instrutor-delete.component';
 import { ClienteListComponent } from './components/cliente/cliente-list/cliente-list.component';
 import { ClienteCreateComponent } from './components/cliente/cliente-create/cliente-create.component';
+import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { ClienteCreateComponent } from './components/cliente/cliente-create/clie
     InstrutorUpdateComponent,
     InstrutorDeleteComponent,
     ClienteListComponent,
-    ClienteCreateComponent
+    ClienteCreateComponent,
+    ClienteUpdateComponent
   ],
   imports: [
     BrowserModule,
