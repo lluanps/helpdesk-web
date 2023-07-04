@@ -8,6 +8,7 @@ import { AuthGuard } from './auth/auth.guard';
 import { InstrutorCreateComponent } from './components/instrutor/instrutor-create/instrutor-create.component';
 import { InstrutorUpdateComponent } from './components/instrutor/instrutor-update/instrutor-update.component';
 import { InstrutorDeleteComponent } from './components/instrutor/instrutor-delete/instrutor-delete.component';
+import { ClienteListComponent } from './components/cliente/cliente-list/cliente-list.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,11 @@ const routes: Routes = [
       {path: 'instrutores/create', component: InstrutorCreateComponent},
       {path: 'instrutores/update/:id', component: InstrutorUpdateComponent},
       {path: 'instrutores/delete/:id', component: InstrutorDeleteComponent},
+
+      {path: 'clientes', component: ClienteListComponent},
+      //{path: 'clientes/create', component: ClienteCreateComponent},
+      //{path: 'clientes/update/:id', component: ClienteUpdateComponent},
+      //{path: 'clientes/delete/:id', component: ClienteDeleteComponent},
     ]
   }
 ];

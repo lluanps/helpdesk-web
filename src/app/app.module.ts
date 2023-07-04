@@ -38,6 +38,7 @@ import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
 import { InstrutorCreateComponent } from './components/instrutor/instrutor-create/instrutor-create.component';
 import { InstrutorUpdateComponent } from './components/instrutor/instrutor-update/instrutor-update.component';
 import { InstrutorDeleteComponent } from './components/instrutor/instrutor-delete/instrutor-delete.component';
+import { ClienteListComponent } from './components/cliente/cliente-list/cliente-list.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { InstrutorDeleteComponent } from './components/instrutor/instrutor-delet
     LoginComponent,
     InstrutorCreateComponent,
     InstrutorUpdateComponent,
-    InstrutorDeleteComponent
+    InstrutorDeleteComponent,
+    ClienteListComponent
   ],
   imports: [
     BrowserModule,
