@@ -17,8 +17,6 @@ mat-form-field {
     color: rgb(82, 30, 117);
 }
 
-mat-radio-group {
-    width: 20%;
-    display: flex;
-    justify-content: space-around;
+mat-radio-button {
+    padding-left: 1rem;
 }
