@@ -9,5 +9,5 @@ export interface Chamado {
     instrutor: any,
     cliente: any,
     nomeCliente: string,
-    nomeInstrutoe: string,
+    nomeInstrutor: string,
 }
