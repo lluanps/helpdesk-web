@@ -9,6 +9,7 @@ import { InstrutorCreateComponent } from './components/instrutor/instrutor-creat
 import { InstrutorUpdateComponent } from './components/instrutor/instrutor-update/instrutor-update.component';
 import { InstrutorDeleteComponent } from './components/instrutor/instrutor-delete/instrutor-delete.component';
 import { ClienteListComponent } from './components/cliente/cliente-list/cliente-list.component';
+import { ClienteCreateComponent } from './components/cliente/cliente-create/cliente-create.component';
 
 const routes: Routes = [
   {
@@ -25,7 +26,7 @@ const routes: Routes = [
       {path: 'instrutores/delete/:id', component: InstrutorDeleteComponent},
 
       {path: 'clientes', component: ClienteListComponent},
-      //{path: 'clientes/create', component: ClienteCreateComponent},
+      {path: 'clientes/create', component: ClienteCreateComponent},
       //{path: 'clientes/update/:id', component: ClienteUpdateComponent},
       //{path: 'clientes/delete/:id', component: ClienteDeleteComponent},
     ]
