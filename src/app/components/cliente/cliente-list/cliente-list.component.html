@@ -9,7 +9,8 @@
         <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
       </mat-form-field>
       
-      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <div class="mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource">
       
         <ng-container matColumnDef="id">
           <th mat-header-cell *matHeaderCellDef> Id </th>
@@ -52,6 +53,7 @@
             showFirstLastButtons
             aria-label="Select page of periodic elements">
         </mat-paginator>
+    </div>
 </div>
 
 
