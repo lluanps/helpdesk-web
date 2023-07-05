@@ -1,0 +1,59 @@
+.container {
+    width: 90%;
+    margin: auto;
+    padding: 1rem 1rem 3rem 1rem;
+    border-radius: .6rem;
+}
+
+.full-width {
+    width: 100%;
+}
+
+h1 {
+    text-align: center;   
+}
+
+form {
+    width: 49%;
+}
+
+.instrutor {
+    display: flex;
+    justify-content: space-between;
+}
+
+.instrutor-select {
+    width: 49%;
+}
+
+.cliente-select {
+    width: 49%;
+}
+
+.status-prioridade {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.select {
+    width: 49%;
+}
+
+.area {
+    width: 50%;
+    padding-left: 50rem;
+}
+
+.text-tamanho-min {
+    min-height: 6rem;
+    max-height: 10rem;
+}
+
+button {
+    margin: 1rem .5rem;
+}
+
+mat-icon {
+    opacity: .7;
+}
