@@ -20,13 +20,13 @@
 
     <div class="instrutor">
         <mat-form-field class="instrutor-select" appearance="outline">
-            <mat-label>Selecione um Insutrutor</mat-label>
+            <mat-label>{{ chamado.nomeInstrutor }}</mat-label>
             <mat-select [(ngModel)]="chamado.instrutor" name="instrutor" [formControl]="instrutor" required>
                 <mat-option *ngFor="let instrutor of instrutores" value="{{ instrutor.id }}">{{ instrutor.nome }}</mat-option>
             </mat-select>
         </mat-form-field>
         <mat-form-field class="cliente-select" appearance="outline">
-            <mat-label>Selecione um Cliente</mat-label>
+            <mat-label>{{ chamado.nomeCliente }}</mat-label>
             <mat-select [(ngModel)]="chamado.cliente" name="cliente" [formControl]="cliente" required>
                 <mat-option *ngFor="let cliente of clientes" value="{{ cliente.id }}">{{ cliente.nome }}</mat-option>
             </mat-select>
@@ -35,7 +35,7 @@
 
     <div class="status-prioridade">
         <mat-form-field class="select" appearance="outline">
-            <mat-label>Selecione Status do Chamado</mat-label>
+            <mat-label>{{ retornaStatus(chamado.status) }}</mat-label>
             <mat-select [(ngModel)]="chamado.status" name="status" [formControl]="status" required>
               <mat-option value="0">Aberto</mat-option>
               <mat-option value="1">EM ANDAMENTO</mat-option>
@@ -43,7 +43,7 @@
             </mat-select>
         </mat-form-field>
         <mat-form-field class="select" appearance="outline">
-            <mat-label >Selecione a Prioridade</mat-label>
+            <mat-label >{{ retornaPrioridade(chamado.prioridade) }}</mat-label>
             <mat-select [(ngModel)]="chamado.prioridade" name="prioridade" [formControl]="prioridade" required>
               <mat-option value="0">BAIXA</mat-option>
               <mat-option value="1">MÉDIA</mat-option>
@@ -57,7 +57,7 @@
         <textarea [(ngModel)]="chamado.observacoes" name="observacoes" [formControl]="observacoes" required class="text-tamanho-min" matInput placeholder="Campo para descrição/observações"></textarea>
       </mat-form-field>
     
-      <button (click)="create()" [disabled]="!validaCampos()" class="mat-elevation-z4" mat-stroked-button color="primary">Atualizar</button>
-      <button class="mat-elevation-z4" routerLink="../" mat-raised-button color="warn">Cancelar</button>
+      <button (click)="update()" [disabled]="!validaCampos()" class="mat-elevation-z4" mat-stroked-button color="primary">Atualizar</button>
+      <button class="mat-elevation-z4" routerLink="chamados" mat-raised-button color="warn">Cancelar</button>
       
 </div>
