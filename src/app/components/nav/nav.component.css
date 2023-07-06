@@ -5,7 +5,7 @@
 .sidenav {
     width: 13rem;
     color: white;
-    background: linear-gradient(90deg, rgba(2,0,36,1) 32%, rgb(4, 13, 44) 68%, rgb(6, 3, 64) 93%);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 32%, rgba(2,0,36,1) 68%, rgb(13, 0, 37) 93%);
 }
 
 .sidenav a {
@@ -19,10 +19,20 @@
 .menu {
     margin: 1rem 0 0 1rem;
     color: white;
-    background: linear-gradient(90deg, rgba(2,0,36,1) 32%, rgb(4, 13, 44) 68%, rgba(6,36,70,1) 93%);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 32%, rgb(4, 13, 44) 68%, rgb(10, 1, 33) 93%);
 }
 
 .logo-menu {
     width: 100%;
     
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    opacity: 65%;
+}
+
+.menu:hover {
+    opacity: 100%;
 }

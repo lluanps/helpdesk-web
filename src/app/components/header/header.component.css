@@ -2,11 +2,76 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 2rem 0 4rem 0;
 }
 
-h1 {
-    margin-top: 1rem;
-    border: 1px solid rgba(219, 217, 233, 0.653);
-    padding: 1rem 10%;
-    border-radius: 2rem;
-}
+button {
+    font-size: 30px;
+    color: black;
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+  }
+  
+  button:focus,
+  button:hover {
+    color: #2c0575;;
+  }
+  
+  button:focus:after,
+  button:hover:after {
+    width: 100%;
+    left: 0%;
+  }
+  
+  button:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #401176;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+  }
+
+  .loading svg polyline {
+    fill: none;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  
+  .loading svg polyline#back {
+    fill: none;
+    stroke: #460e9a64;
+  }
+  
+  .loading svg polyline#front {
+    fill: none;
+    stroke: #360782;
+    stroke-dasharray: 48, 144;
+    stroke-dashoffset: 192;
+    animation: dash_682 1.4s linear infinite;
+  }
+  
+  @keyframes dash_682 {
+    72.5% {
+      opacity: 0;
+    }
+  
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  

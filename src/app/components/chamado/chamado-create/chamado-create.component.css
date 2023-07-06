@@ -10,7 +10,16 @@
 }
 
 h1 {
-    text-align: center;   
+    text-align: center;
+    margin-top: .7rem;
+    margin-bottom: .6rem;
+    font-size: 30px;
+    opacity: 80%;
+}
+
+.linha-titulo, hr {
+    margin-bottom: 3rem;
+    opacity: 50%;
 }
 
 form {
