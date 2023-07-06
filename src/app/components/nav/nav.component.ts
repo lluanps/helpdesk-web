@@ -14,7 +14,7 @@ export class NavComponent implements OnInit {
   constructor(private router: Router, private authservice: AuthService, private toast: ToastrService) { }
 
   ngOnInit(): void {
-    this.router.navigate(['chamados/read/1'])
+    this.router.navigate(['home'])
     this.toast.show("Acesso o menu no canto superior esquerdo para mais informações", "Bem vindo!", {timeOut:6000});
   }
 

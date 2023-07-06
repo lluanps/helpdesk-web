@@ -1,1 +1,63 @@
-<p>chamado-read works!</p>
+<div class="container mat-elevation-z4">
+    <h1>Lista Chamado</h1>
+    <hr class="linha-titulo">
+
+    <form class="form">
+        <mat-form-field class="full-width" appearance="outline">
+          <mat-label>Título do Chamado</mat-label>
+          <input
+          [(ngModel)]="chamado.titulo" name="titulo"
+            disabled="true"
+           matInput placeholder="Ex. treino/boxe">
+        </mat-form-field>
+    <!--  <mat-form-field>
+            <mat-label>Choose a date</mat-label>
+            <input matInput [matDatepicker]="picker">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>         -->  
+    </form>
+
+    <div class="instrutor">
+        <mat-form-field class="instrutor-select" appearance="outline">
+            <mat-label>{{ chamado.nomeInstrutor }}</mat-label>
+            <mat-select disabled="true" [(ngModel)]="chamado.instrutor" name="instrutor">
+                <mat-option >{{ chamado.nomeInstrutor }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field class="cliente-select" appearance="outline">
+            <mat-label>{{ chamado.nomeCliente }}</mat-label>
+            <mat-select disabled="true" [(ngModel)]="chamado.nomeCliente" name="cliente" >
+                <mat-option>{{ chamado.nomeCliente }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+    <div class="status-prioridade">
+        <mat-form-field class="select" appearance="outline">
+            <mat-label>STATUS ({{ retornaStatus(chamado.status) }})</mat-label>
+            <mat-select disabled="true" [(ngModel)]="chamado.status" name="status">
+              <mat-option value="0">Aberto</mat-option>
+              <mat-option value="1">EM ANDAMENTO</mat-option>
+              <mat-option value="2">ENCERRADO</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field class="select" appearance="outline">
+            <mat-label >PRIORIDADE ({{ retornaPrioridade(chamado.prioridade) }})</mat-label>
+            <mat-select disabled="true" [(ngModel)]="chamado.prioridade" name="prioridade">
+              <mat-option value="0">BAIXA</mat-option>
+              <mat-option value="1">MÉDIA</mat-option>
+              <mat-option value="2">ALTA</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+    <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Observações</mat-label>
+        <textarea disabled="true" [(ngModel)]="chamado.observacoes" name="observacoes" class="text-tamanho-min" matInput placeholder="Campo para descrição/observações"></textarea>
+      </mat-form-field>
+    
+      <button class="mat-elevation-z4" routerLink="../../" mat-raised-button color="warn">Voltar</button>
+      
+</div>
